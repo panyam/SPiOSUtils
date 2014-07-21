@@ -100,7 +100,7 @@ void presentErrorRateLimited(NSError *error, double minseconds)
     }
     else if (elapsedTimeInHours < 1.0)  // less than an hour
     {
-        return [NSString stringWithFormat:@"%d minutes ago", (int)elapsedTimeInMinutes];
+        return [NSString stringWithFormat:@"%d mins ago", (int)elapsedTimeInMinutes];
     }
     else if (elapsedTimeInDays < 1.0)  // less than a day
     {
