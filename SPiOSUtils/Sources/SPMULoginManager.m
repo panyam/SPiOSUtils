@@ -33,7 +33,6 @@ const NSString *SPMU_WRITE_PERMISSIONS_DECLINED = @"SPMU_WRITE_PERMISSIONS_DECLI
     {
         self.loginDelegatesByType = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      [[SPMUEmailLoginDelegate alloc] init], SPMU_LOGINTYPE_EMAIL,
-                                     [[SPMUFacebookLoginDelegate alloc] init], SPMU_LOGINTYPE_FACEBOOK,
                                      nil];
     }
     return self;

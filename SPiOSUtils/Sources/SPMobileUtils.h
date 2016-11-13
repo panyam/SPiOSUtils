@@ -15,7 +15,6 @@
 #include "SPMUUser.h"
 #include "SPMULoginManager.h"
 #include "SPMUEmailLoginDelegate.h"
-#include "SPMUFacebookLoginDelegate.h"
 #include "SPMUDefaultEmailLoginView.h"
 #include "SPMUAlertView.h"
 #endif

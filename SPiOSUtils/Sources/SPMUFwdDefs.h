@@ -21,7 +21,6 @@
 @class SPMUUser;
 @class SPMULoginManager;
 @class SPMUEmailLoginDelegate;
-@class SPMUFacebookLoginDelegate;
 @class SPMUDefaultEmailLoginView;
 @class SPMUEmailLoginView;
 @class SPMUAlertView;
