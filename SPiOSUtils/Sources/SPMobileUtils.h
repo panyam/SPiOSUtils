@@ -9,7 +9,6 @@
 #include "SPMUBaseTabBarVC.h"
 #include "SPMULoadingDataCell.h"
 #include "SPMUUtils.h"
-#include "SPMUSqlUtils.h"
 #include "SPMUWindow.h"
 #include "SPMUActivityIndicator.h"
 #include "SPMUUser.h"
