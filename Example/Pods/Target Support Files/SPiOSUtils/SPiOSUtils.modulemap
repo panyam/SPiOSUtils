@@ -1,0 +1,6 @@
+framework module SPiOSUtils {
+  umbrella header "SPiOSUtils-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SPiOSUtils_Example' do
+  pod 'SPiOSUtils', :path => '../'
+
+  target 'SPiOSUtils_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

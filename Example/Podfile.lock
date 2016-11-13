@@ -1,0 +1,16 @@
+PODS:
+  - SPiOSUtils (0.1.0)
+
+DEPENDENCIES:
+  - SPiOSUtils (from `../`)
+
+EXTERNAL SOURCES:
+  SPiOSUtils:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SPiOSUtils: 17d06a86ca31923eed6b009f3888781f5feaf2d1
+
+PODFILE CHECKSUM: c4e6de6540de8f0c4f0331e7d5e2117dd2216392
+
+COCOAPODS: 1.1.1
