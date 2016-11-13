@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SPiOSUtils'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = 'A bunch of generic iOS utilities'
 
 # This description is used to generate tags and improve search results.
@@ -34,7 +34,7 @@ and others.
   s.source_files = 'SPiOSUtils/Sources/**/*'
   
   s.resource_bundles = {
-     'SPiOSUtils' => ['SPiOSUtils/Resources/*.xib']
+     'SPiOSUtils' => ['Pod/Resources/*.xib']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
