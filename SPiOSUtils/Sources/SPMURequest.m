@@ -26,7 +26,7 @@
 @property (nonatomic) NSTimeInterval timeEndExecute;
 //header files declare them as readonly, make a read-write property as private
 @property (nonatomic, strong) NSURLResponse *response;
-@property (nonatomic) int responseStatusCode;
+@property (nonatomic) NSInteger responseStatusCode;
 @property (nonatomic, strong) NSMutableData *responseData;
 @property (nonatomic, strong) NSError *error;
 
@@ -355,21 +355,21 @@
     {
         self.totalBytesReceived = 0;
         self.response = response_;
-        self.responseStatusCode = ((NSHTTPURLResponse *)response).statusCode;
+        responseStatusCode = ((NSHTTPURLResponse *)response).statusCode;
         if (self.responseStatusCode / 100 == 2)  // 2XX status codes are ok
         {
             // all good
         }
         else if (self.responseStatusCode >= 500)
         {
-            NSString *message = [NSString stringWithFormat:@"System Error %d", self.responseStatusCode];
+            NSString *message = [NSString stringWithFormat:@"System Error %ld", (long)self.responseStatusCode];
             self.error = [NSError errorWithDomain:(NSString *)SPMUSystemErrorDomain
                                              code:self.responseStatusCode
                                          userInfo:[NSDictionary dictionaryWithObject:message forKey:NSLocalizedDescriptionKey]];
         }
         else if (self.responseStatusCode >= 400)
         {
-            NSString *message = [NSString stringWithFormat:@"User Error %d", self.responseStatusCode];
+            NSString *message = [NSString stringWithFormat:@"User Error %ld", (long)self.responseStatusCode];
             self.error = [NSError errorWithDomain:(NSString *)SPMUUserErrorDomain
                                              code:self.responseStatusCode
                                          userInfo:[NSDictionary dictionaryWithObject:message forKey:NSLocalizedDescriptionKey]];

@@ -8,7 +8,7 @@
 
 #import "SPMUFwdDefs.h"
 
-typedef void (^SPMUAlertViewHandler)(SPMUAlertView *alertView, int buttonClicked);
+typedef void (^SPMUAlertViewHandler)(SPMUAlertView *alertView, NSInteger buttonClicked);
 
 @interface SPMUAlertView : UIAlertView<UIAlertViewDelegate>
 

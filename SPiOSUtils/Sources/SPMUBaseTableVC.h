@@ -22,20 +22,20 @@ typedef UITableViewCell *(^SPMUTableCellMaker)(UITableView *tableView, NSIndexPa
 
 -(void)reloadData;
 -(NSInteger)dataCount;
--(id)rowDataAtVirtualIndex:(int)index;
+-(id)rowDataAtVirtualIndex:(NSInteger)index;
 -(NSInteger)realRowIndexForVirtualIndex:(NSInteger)index;
 
 -(void)finishedLoadingData:(NSArray *)data
-                  atOffset:(int)offset
-              withMaxCount:(int)maxCount
+                  atOffset:(NSInteger)offset
+              withMaxCount:(NSInteger)maxCount
                  withToken:(NSString *)token
                    hasMore:(BOOL)hasMore;
--(void)errorLoadingDataAtOffset:(int)offset
-                  expectedCount:(int)expectedCount
+-(void)errorLoadingDataAtOffset:(NSInteger)offset
+                  expectedCount:(NSInteger)expectedCount
                       withToken:(NSString *)token
                       withError:(NSError *)error;
--(void)loadDataAtOffset:(int)offset
-           withMaxCount:(int)maxCount
+-(void)loadDataAtOffset:(NSInteger)offset
+           withMaxCount:(NSInteger)maxCount
             withHandler:(SPMUCallbackHandler)handler;
 
 -(void)tableView:(UITableView *)tableView didSelectDataRowAtIndexPath:(NSIndexPath *)indexPath;

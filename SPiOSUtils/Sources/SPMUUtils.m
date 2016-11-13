@@ -324,7 +324,7 @@ NSMutableString *dataToHexString(NSData *data)
     const char *bytes = [data bytes];
     if (bytes)
     {
-        for (int i = 0, count = [data length];i < count;i++)
+        for (NSInteger i = 0, count = [data length];i < count;i++)
         {
             unsigned currChar = ((unsigned char *)bytes)[i];
             [str appendFormat:@"%c%c", hexChars[currChar / 16], hexChars[currChar % 16]];

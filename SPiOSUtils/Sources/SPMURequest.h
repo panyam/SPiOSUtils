@@ -44,7 +44,7 @@ typedef void (^SPMURequestProgressHandler)(SPMURequest *request, NSData *data, l
 // A flag to indicate the request need to be send again.
 @property (nonatomic) BOOL resubmit;
 @property (nonatomic, readonly) NSURLResponse *response;
-@property (nonatomic, readonly) int responseStatusCode;
+@property (nonatomic, readonly) NSInteger responseStatusCode;
 @property (nonatomic, readonly) NSMutableData *responseData;
 @property (nonatomic, readonly) NSString *responseString;
 @property (nonatomic, readonly) NSError *error;

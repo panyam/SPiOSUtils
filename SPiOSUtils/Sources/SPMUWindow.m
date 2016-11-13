@@ -18,7 +18,7 @@
 @property (nonatomic) CGRect oldViewFrame;
 
 // Index of the view in its original parent.
-@property (nonatomic) int oldViewIndex;
+@property (nonatomic) NSInteger oldViewIndex;
 
 @end
 

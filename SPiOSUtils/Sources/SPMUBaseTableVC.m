@@ -86,17 +86,17 @@
     [super releaseResources];
 }
 
--(int)dataCount
+-(NSInteger)dataCount
 {
     return rowData.count;
 }
 
--(id)rowDataAtVirtualIndex:(int)index
+-(id)rowDataAtVirtualIndex:(NSInteger)index
 {
     return [rowData objectAtIndex:index];
 }
 
--(int)realRowIndexForVirtualIndex:(NSInteger)index
+-(NSInteger)realRowIndexForVirtualIndex:(NSInteger)index
 {
     return index;
 }
@@ -104,7 +104,7 @@
 #pragma mark -
 #pragma mark - UITableView methods
 
--(int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return rowData.count + (hasMoreData ? 1 : 0);
 }
@@ -199,15 +199,15 @@
 }
 
 // The method to overload to do the actual data overload
--(void)loadDataAtOffset:(int)offset
-           withMaxCount:(int)maxCount
+-(void)loadDataAtOffset:(NSInteger)offset
+           withMaxCount:(NSInteger)maxCount
             withHandler:(SPMUCallbackHandler)handler
 {
     NSAssert(NO, @"Override this method to load data into the table");
 }
 
--(BOOL)kickOffLoadDataAtOffset:(int)offset
-                  withMaxCount:(int)maxCount
+-(BOOL)kickOffLoadDataAtOffset:(NSInteger)offset
+                  withMaxCount:(NSInteger)maxCount
                    withHandler:(SPMUCallbackHandler)handler
 {
     self.loadToken = NSProcessInfo.processInfo.globallyUniqueString;
@@ -264,17 +264,17 @@
     [self kickOffLoadDataAtOffset:self.dataOffset withMaxCount:CHUNK_LOAD_SIZE withHandler:nil];
 }
 
--(void)startedLoadingDataAtOffset:(int)offset withMaxCount:(int)maxCount withToken:(NSString *)token
+-(void)startedLoadingDataAtOffset:(NSInteger)offset withMaxCount:(NSInteger)maxCount withToken:(NSString *)token
 {
 //    [self lookBusy:YES];
 }
 
--(void)finishedLoadingData:(NSArray *)data atOffset:(int)offset withMaxCount:(int)maxCount withToken:(NSString *)token hasMore:(BOOL)hasMore
+-(void)finishedLoadingData:(NSArray *)data atOffset:(NSInteger)offset withMaxCount:(NSInteger)maxCount withToken:(NSString *)token hasMore:(BOOL)hasMore
 {
 }
 
--(void)errorLoadingDataAtOffset:(int)offset
-                  expectedCount:(int)expectedCount
+-(void)errorLoadingDataAtOffset:(NSInteger)offset
+                  expectedCount:(NSInteger)expectedCount
                       withToken:(NSString *)token
                       withError:(NSError *)error
 {
