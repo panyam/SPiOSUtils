@@ -39,6 +39,5 @@ and others.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'Foundation', 'QuartzCore'
-  s.library = 'sqlite3'
   s.dependency 'FBSDKCoreKit'
 end
