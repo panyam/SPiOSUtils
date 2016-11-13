@@ -49,7 +49,7 @@
     {
         if (self.holderWindow == nil)
             self.holderWindow = [[SPMUWindow alloc] initWithFrame:CGRectZero];
-        URL *bundleURL = [[NSBundle bundleForClass:self.class] URLForResource:@"SPiOSUtils" withExtension:@"bundle"];
+        NSURL *bundleURL = [[NSBundle bundleForClass:self.class] URLForResource:@"SPiOSUtils" withExtension:@"bundle"];
         NSBundle *bundle = [NSBundle bundleWithURL:bundleURL];
         self.defaultLoadingView = [[bundle loadNibNamed:@"SPMUDefaultActivityIndicatorView" owner:self options:nil] objectAtIndex:0];
         self.defaultLoadingView.layer.cornerRadius = 10;
